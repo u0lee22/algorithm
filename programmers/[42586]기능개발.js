@@ -6,8 +6,8 @@ function solution(progresses, speeds) {
     progresses.forEach((progressTask, taskIdx) => {
         finishSchedule.push(Math.ceil((100 - progressTask) / speeds[taskIdx]));
         var finishScheduleIdx = finishSchedule.length;
-        if (taskIdx > 0 &&
-            (finishSchedule[finishScheduleIdx - 2] >= finishSchedule[finishScheduleIdx - 1])
+        if (taskIdx > 0 
+           && (finishSchedule[finishScheduleIdx - 2] >= finishSchedule[finishScheduleIdx - 1])
         ) {
             answer[answer.length - 1] += 1;
             finishSchedule.pop();
